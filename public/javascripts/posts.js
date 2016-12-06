@@ -1,7 +1,7 @@
 /*global $:false */
 /*global _:false */
 /*jslint browser:true, devel: true */
-var RoomController = function() {
+/*var RoomController = function() {
   function setAjaxHandler() {
     $( document ).ajaxStart(function() {
       $("#main").addClass("loading");
@@ -48,17 +48,16 @@ var RoomController = function() {
     }
     if (!checked('priority', task.priority)) {
       return false;
-    }
-  };
-  /*if (_.includes(['개인', '가족', '업무'], task.category)) {
+    }*/
+    /*if (_.includes(['개인', '가족', '업무'], task.category)) {
       if (!checked('category', task.category)) {
         return false;
       }
     } else if (!checked('category', '기타')) {
       return false;
-    }  
+    }*/ /*
     return true;
-  }; 
+  };
 
   Constructor.prototype.load = function() {
     var self = this;
@@ -151,4 +150,3 @@ var RoomController = function() {
 
   return Constructor;
 } (); */
-} ();
