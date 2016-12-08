@@ -3,7 +3,7 @@ extends layout
 block hero-unit
   .jumbotron
     .container
-      h1  여행은 살아보는 거야. 전 세계의 독특한 숙소를 예약하고 현지인의 삶을 살아보세요.
+      h1  여행은 살아보는 거야. </br> 전 세계의 독특한 숙소를 예약하고 현지인의 삶을 살아보세요.
 
 block content
   .container
@@ -50,7 +50,7 @@ block content
           div.modal-content
             div.modal-header
               button(type='button' ,class='close', data-dismiss='modal') x
-            label 이메일로 로그인
+            label 로그인
             div.modal-body
               form(action='/signin', method='POST')
                 label(for='email', class='sr-only') Email address
