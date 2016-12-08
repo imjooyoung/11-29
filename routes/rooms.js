@@ -10,6 +10,7 @@ function needAuth(req, res, next) {
     res.status(401).json({message: 'Not authorized'});
   }
 }
+/*
 function validateForm(form, options) {
   var name = form.name || "";
   var email = form.email || "";
@@ -38,9 +39,9 @@ function validateForm(form, options) {
 
   return null;
 }
+*/
 
-
-/*router.get('/', needAuth, function(req, res, next) {
+router.get('/', needAuth, function(req, res, next) {
   Room.find({user: req.user.id}, function(err, rooms) {
     if (err) {
       return res.status(500).json({message: 'interfefnal error', desc: err});
@@ -48,7 +49,7 @@ function validateForm(form, options) {
     res.json(rooms);
   });
 });
-*/
+
 router.post('/:id', function(req, res, next) {
   if (!req.body.content) {
     return res.status(400).json({message: 'need content'});
@@ -88,7 +89,7 @@ router.get('/:id',function(req,res,next){
 });
 
 
-/*router.put('/:id', needAuth, function(req, res, next) {
+router.put('/:id', needAuth, function(req, res, next) {
   Room.findById(req.params.id, function(err, Room) {
     if (err) {
       return res.status(500).json({message: 'internal error', desc: err});
@@ -143,5 +144,5 @@ router.delete('/:id', needAuth, function(req, res, next) {
     res.json({id: Room._id});
   });
 });
-*/
+
 module.exports = router;

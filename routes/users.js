@@ -6,8 +6,8 @@ function needAuth(req, res, next) {
   if (req.isAuthenticated()) {
     next();
   } else {
-    req.flash('danger', '로그인이 필요합니다.');
-    res.redirect('/signin');
+    req.flash('danger', '로그인이 필요합니다.'); 
+    res.redirect('/signin'); // 로그인 페이지로 리다이렉트 
   }
 }
 
