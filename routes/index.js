@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Room = require('../models/Room');
-var User = require('../models/User');
+var Room = require('../models/Room'); //room 모델을 포함
+var User = require('../models/User'); // user모델을 포함
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index'); // 홈페이지를 열면 index.jade를 보여준다.
 });
 router.get('/hosting/:id', function(req, res, next) {
   User.findById(req.params.id,function(err,user){

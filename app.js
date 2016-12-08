@@ -44,7 +44,7 @@ app.use(methodOverride('_method', {methods: ['POST', 'GET']}));
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: '비밀번호를 길게 설정하쟞 20161206' // 이부분 바꿔도 디?
+  secret: '비밀번호를 길게 설정하쟞 20161206' 
 }));
 app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
