@@ -17,19 +17,7 @@ router.get('/hosting/:id', function(req, res, next) {
   
 });
 router.get('/:id', function(req, res, next) {
-  /*Room.findAndModify(req.params.id, function(err, room) {
-    if (err) {
-      return next(err);
-    }
-    room.update({id:req.params.id}, {$set:{reservation:true}});
-    res.render('index');
-  });*/
-  /*Room.update({id:req.params.id},{$set:{reservation:true}});
-  res.render('index');*/
-  /*Room.findOneAndUpdate(
-   { "_id": req.params.id },
-   {$set:{"reservation":true}}
-  );*/
+
   Room.findById(req.params.id,function(err,room){
     if(err){
         return next(err);
@@ -44,12 +32,6 @@ router.get('/:id', function(req, res, next) {
   });
  
 });
-/*router.get('/signout/:id', function(req, res, next) {
-  //req.logout();
-  res.render('index',{user:null});
-});*/
-/*router.get('/posts', function(req, res, next) {
-  res.render('/posts');
-});*/
+
 
 module.exports = router;

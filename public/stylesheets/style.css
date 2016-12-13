@@ -2,10 +2,10 @@ form.posts {
   width: 100%;
   margin: 0 0 1em 0;
   padding: 1em;
-  background: #acddf2; }
+  background: #2c9cd2; }
   form.posts .main input[type='text'] {
     font-size: 1.4em;
-    border: 1px solid #2c9cd2;
+    border: 1px solid #acddf2;
     padding: 0.5em 1em;
     margin-bottom: 1em;
     width: 100%;
