@@ -44,6 +44,12 @@ router.get('/:id', function(req, res, next) {
   });
  
 });
-
+/*router.get('/signout/:id', function(req, res, next) {
+  //req.logout();
+  res.render('index',{user:null});
+});*/
+/*router.get('/posts', function(req, res, next) {
+  res.render('/posts');
+});*/
 
 module.exports = router;
