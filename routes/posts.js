@@ -11,6 +11,30 @@ function needAuth(req, res, next) {
     res.redirect('/');
   }
 }
+/*
+function validateForm(form, options) {
+  var name = form.name || "";
+  var email = form.email || "";
+  name = name.trim();
+  email = email.trim();
+  if (!name) {
+    return '제목을 입력해주세요.';
+  }
+  if (!email) {
+    return '이메일을 입력해주세요.';
+  }
+  if (!form.password && options.needPassword) {
+    return '비밀번호를 입력해주세요.';
+  }
+  if (form.password !== form.password_confirmation) {
+    return '비밀번호가 일치하지 않습니다.';
+  }
+  if (form.password.length < 6) {
+    return '비밀번호는 6글자 이상이어야 합니다.';
+  }
+  return null;
+}
+*/
 
 router.get('/', function(req, res, next) {
   Room.find({},function(err,rooms){
@@ -24,6 +48,8 @@ router.post('/',needAuth, function(req, res, next) {
   });
 });
 
-
+/*router.post('/', function(req, res, next) {
+   res.render('posts');
+ });*/
 
 module.exports = router;

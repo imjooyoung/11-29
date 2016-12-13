@@ -3,7 +3,7 @@ extends layout
 block hero-unit
   .jumbotron
     .container
-      h1  여행은 살아보는 거야. </br> 전 세계의 독특한 숙소를 예약하고 현지인의 삶을 살아보세요.
+      h1  AIRBNB </br> 전 세계의 독특한 숙소를 예약하고 현지인의 삶을 살아보세요.
 
 block content
   .container
@@ -29,16 +29,16 @@ block content
             div.modal-body
               form(action='/users', method='POST') 
                 .form-group
-                  label(for='name') Name
+                  label(for='name') 이름
                   input.form-control(type='text', id='name', name='name', placeholder='Name')
                 .form-group
-                  label(for='email') Email address
+                  label(for='email') 이메일 주소
                   input.form-control(type='email', id='email', name='email', placeholder='Email')
                 .form-group
-                  label(for='password') Password
+                  label(for='password') 비밀번호
                   input.form-control(type='password', id='password', name='password', placeholder='Password')
                 .form-group
-                  label(for='password_confirmation') Password 확인
+                  label(for='password_confirmation') 비밀번호 확인
                   input.form-control(type='password', id='password_confirmation', name='password_confirmation', placeholder='Password')
                 div.form-actions
                   a.btn.btn-default(href='javascript:window.history.back();') 뒤로 
@@ -53,12 +53,12 @@ block content
             label 로그인
             div.modal-body
               form(action='/signin', method='POST')
-                label(for='email', class='sr-only') Email address
+                label(for='email', class='sr-only') 이메일 주소
                 input(
                   type='email', id='email', name='email', class='form-control', 
                   placeholder='Email address', required, autofocus
                 )
-                label(for='password', class='sr-only') Password
+                label(for='password', class='sr-only') 비밀번호
                 input(
                   type='password', id='password', name='password', class='form-control', 
                   placeholder='Password', required, autofocus

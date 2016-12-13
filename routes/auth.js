@@ -25,6 +25,8 @@ module.exports = function(app, passport) {
     req.flash('success', '로그아웃 되었습니다.');
     res.render('index');
   });
-
+/*  app.get('/hosting', function(req, res, next) {
+    res.render('hosting');
+  });*/
 };
   

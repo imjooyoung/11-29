@@ -17,7 +17,19 @@ router.get('/hosting/:id', function(req, res, next) {
   
 });
 router.get('/:id', function(req, res, next) {
-
+/*Room.findAndModify(req.params.id, function(err, room) {
+ -    if (err) {
+ -      return next(err);
+ -    }
+ -    room.update({id:req.params.id}, {$set:{reservation:true}});
+ -    res.render('index');
+ -  });*/
+ -  /*Room.update({id:req.params.id},{$set:{reservation:true}});
+ -  res.render('index');*/
+ -  /*Room.findOneAndUpdate(
+ -   { "_id": req.params.id },
+ -   {$set:{"reservation":true}}
+ -  );*/
   Room.findById(req.params.id,function(err,room){
     if(err){
         return next(err);

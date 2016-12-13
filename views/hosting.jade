@@ -3,22 +3,22 @@ extends layout
 block content
   .container
     form(id='form-room', action='/rooms/#{currentUser._id}', method='POST')
-      label(for='name') Name
+      label(for='name') 제목
       input(
         type='name', id='name', name='name', class='form-control', 
         placeholder='Name', required, autofocus
       )
-      label(for='city') City
+      label(for='city') 도시
       input(
         type='city', id='city', name='city', class='form-control', 
         placeholder='City', required, autofocus
       )
-      label(for='address') Address
+      label(for='address') 주소
       input(
         type='address', id='address', name='address', class='form-control', 
         placeholder='Address', required, autofocus
       )
-      label(for='convenience') Convenience
+      label(for='convenience') 편의시설
       input(
         type='convenience', id='convenience', name='convenience', class='form-control', 
         placeholder='Convenience', required, autofocus
@@ -28,13 +28,13 @@ block content
         type='content', id='content', name='content', class='form-control', 
         placeholder='Content', required, autofocus
       )
-      label(for='fee') Fee
+      label(for='fee') 하루 숙박비
       input(
         type='fee', id='fee', name='fee', class='form-control', 
         placeholder='Fee', required, autofocus
       )
       .form-group
-        label Number of People
+        label 인원
         select(name='person')
           option(value='1',selected) 1
           option(value='2') 2
